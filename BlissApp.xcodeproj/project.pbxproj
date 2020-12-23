@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91D2F41D5A57F830C68F17B7 /* Pods_BlissApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825A0362F7F860900EC4A226 /* Pods_BlissApp.framework */; };
+		A40A12E525911A4E00A7F1EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A12E425911A4E00A7F1EF /* AppDelegate.swift */; };
+		A40A12E925911A4E00A7F1EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A12E825911A4E00A7F1EF /* HomeViewController.swift */; };
+		A40A12EC25911A4E00A7F1EF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40A12EA25911A4E00A7F1EF /* Home.storyboard */; };
+		A40A12EF25911A4E00A7F1EF /* BlissApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A40A12ED25911A4E00A7F1EF /* BlissApp.xcdatamodeld */; };
+		A40A12F125911A5000A7F1EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40A12F025911A5000A7F1EF /* Assets.xcassets */; };
+		A40A12F425911A5000A7F1EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40A12F225911A5000A7F1EF /* LaunchScreen.storyboard */; };
+		A40A13122591330B00A7F1EF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A13112591330A00A7F1EF /* HomeViewModel.swift */; };
+		A40A13152591343200A7F1EF /* BlissRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A13142591343200A7F1EF /* BlissRepository.swift */; };
+		A40A13182591358D00A7F1EF /* EmojisImgResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A13172591358D00A7F1EF /* EmojisImgResponse.swift */; };
+		A40A132025913A1600A7F1EF /* BlissRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A131F25913A1600A7F1EF /* BlissRemoteDataSource.swift */; };
+		A40A132325913A7900A7F1EF /* BlissDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A132225913A7900A7F1EF /* BlissDataSource.swift */; };
+		A40A132725913DA200A7F1EF /* RunTimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A132625913DA200A7F1EF /* RunTimeError.swift */; };
+		A40A132B2591413800A7F1EF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A132A2591413800A7F1EF /* LoadingView.swift */; };
+		A4598ADF259246770071C223 /* BlissLocalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4598ADE259246770071C223 /* BlissLocalModel.swift */; };
+		A4598AE3259246D90071C223 /* BlissLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4598AE2259246D90071C223 /* BlissLocalDataSource.swift */; };
+		A4598AE6259247EE0071C223 /* EmojisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4598AE5259247EE0071C223 /* EmojisModel.swift */; };
+		A4598AEA259249500071C223 /* BlissMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4598AE9259249500071C223 /* BlissMapper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		64A3B42E8715779283CC4ADE /* Pods-BlissApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlissApp.debug.xcconfig"; path = "Target Support Files/Pods-BlissApp/Pods-BlissApp.debug.xcconfig"; sourceTree = "<group>"; };
+		76527973ACF66B2871580E5E /* Pods-BlissApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlissApp.release.xcconfig"; path = "Target Support Files/Pods-BlissApp/Pods-BlissApp.release.xcconfig"; sourceTree = "<group>"; };
+		825A0362F7F860900EC4A226 /* Pods_BlissApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlissApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40A12E125911A4E00A7F1EF /* BlissApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlissApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40A12E425911A4E00A7F1EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A40A12E825911A4E00A7F1EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A40A12EB25911A4E00A7F1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		A40A12EE25911A4E00A7F1EF /* BlissApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlissApp.xcdatamodel; sourceTree = "<group>"; };
+		A40A12F025911A5000A7F1EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A40A12F325911A5000A7F1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A40A12F525911A5000A7F1EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A40A13112591330A00A7F1EF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A40A13142591343200A7F1EF /* BlissRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlissRepository.swift; sourceTree = "<group>"; };
+		A40A13172591358D00A7F1EF /* EmojisImgResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisImgResponse.swift; sourceTree = "<group>"; };
+		A40A131F25913A1600A7F1EF /* BlissRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlissRemoteDataSource.swift; sourceTree = "<group>"; };
+		A40A132225913A7900A7F1EF /* BlissDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlissDataSource.swift; sourceTree = "<group>"; };
+		A40A132625913DA200A7F1EF /* RunTimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeError.swift; sourceTree = "<group>"; };
+		A40A132A2591413800A7F1EF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A4598ADE259246770071C223 /* BlissLocalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlissLocalModel.swift; sourceTree = "<group>"; };
+		A4598AE2259246D90071C223 /* BlissLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlissLocalDataSource.swift; sourceTree = "<group>"; };
+		A4598AE5259247EE0071C223 /* EmojisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisModel.swift; sourceTree = "<group>"; };
+		A4598AE9259249500071C223 /* BlissMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlissMapper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A40A12DE25911A4E00A7F1EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D2F41D5A57F830C68F17B7 /* Pods_BlissApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		213A703FCD5706255910747C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64A3B42E8715779283CC4ADE /* Pods-BlissApp.debug.xcconfig */,
+				76527973ACF66B2871580E5E /* Pods-BlissApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A40A12D825911A4E00A7F1EF = {
+			isa = PBXGroup;
+			children = (
+				A40A12E325911A4E00A7F1EF /* BlissApp */,
+				A40A12E225911A4E00A7F1EF /* Products */,
+				213A703FCD5706255910747C /* Pods */,
+				E1DBC8527FD11032673E7477 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A40A12E225911A4E00A7F1EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A40A12E125911A4E00A7F1EF /* BlissApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A40A12E325911A4E00A7F1EF /* BlissApp */ = {
+			isa = PBXGroup;
+			children = (
+				A40A13012591200200A7F1EF /* DataSource */,
+				A40A13022591201100A7F1EF /* Models */,
+				A40A13032591202C00A7F1EF /* Features */,
+				A40A12E425911A4E00A7F1EF /* AppDelegate.swift */,
+				A40A12F025911A5000A7F1EF /* Assets.xcassets */,
+				A40A12F225911A5000A7F1EF /* LaunchScreen.storyboard */,
+				A40A12F525911A5000A7F1EF /* Info.plist */,
+				A40A12ED25911A4E00A7F1EF /* BlissApp.xcdatamodeld */,
+				A40A132625913DA200A7F1EF /* RunTimeError.swift */,
+			);
+			path = BlissApp;
+			sourceTree = "<group>";
+		};
+		A40A13012591200200A7F1EF /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A40A131A2591392E00A7F1EF /* Source */,
+				A4598AE8259248D70071C223 /* Mappers */,
+				A40A132225913A7900A7F1EF /* BlissDataSource.swift */,
+				A40A13142591343200A7F1EF /* BlissRepository.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		A40A13022591201100A7F1EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4598AE5259247EE0071C223 /* EmojisModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A40A13032591202C00A7F1EF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A40A1304259120BD00A7F1EF /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A40A1304259120BD00A7F1EF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A40A13292591411500A7F1EF /* Views */,
+				A40A13072591210D00A7F1EF /* Storyboards */,
+				A40A1305259120CC00A7F1EF /* ViewController */,
+				A40A1306259120ED00A7F1EF /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A40A1305259120CC00A7F1EF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A40A12E825911A4E00A7F1EF /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A40A1306259120ED00A7F1EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A40A13112591330A00A7F1EF /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A40A13072591210D00A7F1EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A40A12EA25911A4E00A7F1EF /* Home.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A40A131A2591392E00A7F1EF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A40A131B2591393800A7F1EF /* Remote */,
+				A40A131C2591394000A7F1EF /* Local */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A40A131B2591393800A7F1EF /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				A40A131D2591398300A7F1EF /* Models */,
+				A40A131F25913A1600A7F1EF /* BlissRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		A40A131C2591394000A7F1EF /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				A4598ADD2592464E0071C223 /* Models */,
+				A4598AE2259246D90071C223 /* BlissLocalDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		A40A131D2591398300A7F1EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A40A13172591358D00A7F1EF /* EmojisImgResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A40A13292591411500A7F1EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A40A132A2591413800A7F1EF /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4598ADD2592464E0071C223 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4598ADE259246770071C223 /* BlissLocalModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4598AE8259248D70071C223 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				A4598AE9259249500071C223 /* BlissMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		E1DBC8527FD11032673E7477 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				825A0362F7F860900EC4A226 /* Pods_BlissApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A40A12E025911A4E00A7F1EF /* BlissApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A40A12F825911A5000A7F1EF /* Build configuration list for PBXNativeTarget "BlissApp" */;
+			buildPhases = (
+				F2FA77D5F1EEA8492C71890D /* [CP] Check Pods Manifest.lock */,
+				A40A12DD25911A4E00A7F1EF /* Sources */,
+				A40A12DE25911A4E00A7F1EF /* Frameworks */,
+				A40A12DF25911A4E00A7F1EF /* Resources */,
+				C9D25862F27D967FB0376CA3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlissApp;
+			productName = BlissApp;
+			productReference = A40A12E125911A4E00A7F1EF /* BlissApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A40A12D925911A4E00A7F1EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					A40A12E025911A4E00A7F1EF = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = A40A12DC25911A4E00A7F1EF /* Build configuration list for PBXProject "BlissApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A40A12D825911A4E00A7F1EF;
+			productRefGroup = A40A12E225911A4E00A7F1EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A40A12E025911A4E00A7F1EF /* BlissApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A40A12DF25911A4E00A7F1EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40A12F425911A5000A7F1EF /* LaunchScreen.storyboard in Resources */,
+				A40A12F125911A5000A7F1EF /* Assets.xcassets in Resources */,
+				A40A12EC25911A4E00A7F1EF /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9D25862F27D967FB0376CA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlissApp/Pods-BlissApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlissApp/Pods-BlissApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlissApp/Pods-BlissApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2FA77D5F1EEA8492C71890D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlissApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A40A12DD25911A4E00A7F1EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40A12E925911A4E00A7F1EF /* HomeViewController.swift in Sources */,
+				A4598ADF259246770071C223 /* BlissLocalModel.swift in Sources */,
+				A4598AEA259249500071C223 /* BlissMapper.swift in Sources */,
+				A40A12E525911A4E00A7F1EF /* AppDelegate.swift in Sources */,
+				A40A132325913A7900A7F1EF /* BlissDataSource.swift in Sources */,
+				A4598AE6259247EE0071C223 /* EmojisModel.swift in Sources */,
+				A40A132B2591413800A7F1EF /* LoadingView.swift in Sources */,
+				A40A132025913A1600A7F1EF /* BlissRemoteDataSource.swift in Sources */,
+				A4598AE3259246D90071C223 /* BlissLocalDataSource.swift in Sources */,
+				A40A13152591343200A7F1EF /* BlissRepository.swift in Sources */,
+				A40A13122591330B00A7F1EF /* HomeViewModel.swift in Sources */,
+				A40A132725913DA200A7F1EF /* RunTimeError.swift in Sources */,
+				A40A12EF25911A4E00A7F1EF /* BlissApp.xcdatamodeld in Sources */,
+				A40A13182591358D00A7F1EF /* EmojisImgResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A40A12EA25911A4E00A7F1EF /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A40A12EB25911A4E00A7F1EF /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		A40A12F225911A5000A7F1EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A40A12F325911A5000A7F1EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A40A12F625911A5000A7F1EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A40A12F725911A5000A7F1EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A40A12F925911A5000A7F1EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A3B42E8715779283CC4ADE /* Pods-BlissApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NJTDJHA5AY;
+				INFOPLIST_FILE = BlissApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafael.martins.BlissApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A40A12FA25911A5000A7F1EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76527973ACF66B2871580E5E /* Pods-BlissApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NJTDJHA5AY;
+				INFOPLIST_FILE = BlissApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafael.martins.BlissApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A40A12DC25911A4E00A7F1EF /* Build configuration list for PBXProject "BlissApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A40A12F625911A5000A7F1EF /* Debug */,
+				A40A12F725911A5000A7F1EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A40A12F825911A5000A7F1EF /* Build configuration list for PBXNativeTarget "BlissApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A40A12F925911A5000A7F1EF /* Debug */,
+				A40A12FA25911A5000A7F1EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A40A12ED25911A4E00A7F1EF /* BlissApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A40A12EE25911A4E00A7F1EF /* BlissApp.xcdatamodel */,
+			);
+			currentVersion = A40A12EE25911A4E00A7F1EF /* BlissApp.xcdatamodel */;
+			path = BlissApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A40A12D925911A4E00A7F1EF /* Project object */;
+}
