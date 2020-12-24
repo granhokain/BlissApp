@@ -105,6 +105,28 @@ class HomeViewController: UIViewController {
         futureImplementations()
     }
 
+    //MARK: Functions
+    @objc func didTapCloseButton(_ sender: Any) {
+        if let presentedVC = presentedViewController {
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromLeft
+            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            presentedVC.view.window!.layer.add(transition, forKey: kCATransition)
+        }
+
+        dismiss(animated: false, completion: nil)
+
+        presentedVC = nil
+    }
+
+    func futureImplementations() {
+        let alert = UIAlertController(title: "What's next", message: "This feature will be implemented soon.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 
     //MARK: Bind ViewModel
     private func bindViewModel() {
@@ -131,27 +153,6 @@ class HomeViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-    }
-
-    @objc func didTapCloseButton(_ sender: Any) {
-        if let presentedVC = presentedViewController {
-            let transition = CATransition()
-            transition.duration = 0.5
-            transition.type = CATransitionType.push
-            transition.subtype = CATransitionSubtype.fromLeft
-            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-            presentedVC.view.window!.layer.add(transition, forKey: kCATransition)
-        }
-
-        dismiss(animated: false, completion: nil)
-
-        presentedVC = nil
-    }
-
-    func futureImplementations() {
-        let alert = UIAlertController(title: "What's next", message: "This feature will be implemented soon.", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
 }
 
