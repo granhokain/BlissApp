@@ -21,7 +21,7 @@ final class BlissRepository {
         self.remoteSource = remoteSource
     }
 
-    func fetchMarketPrice(update: Bool, completion: @escaping EmojiCallback) {
+    func getEmojiList(update: Bool, completion: @escaping EmojiCallback) {
         guard !update else {
             fetchFromRemote(completion: completion)
             return

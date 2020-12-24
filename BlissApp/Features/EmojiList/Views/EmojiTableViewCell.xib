@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellId" rowHeight="170" id="owh-wK-agQ" customClass="EmojiTableViewCell" customModule="BlissApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="467" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="owh-wK-agQ" id="bQx-hT-ufb">
+                <rect key="frame" x="0.0" y="0.0" width="467" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHY-P2-pxY">
+                        <rect key="frame" x="30" y="21" width="407" height="128.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IC9-Od-uyk">
+                                <rect key="frame" x="8" y="25" width="79" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="Y2y-Wg-ADJ"/>
+                                    <constraint firstAttribute="width" constant="79" id="zr4-R6-JVg"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KWA-KA-SpU">
+                                <rect key="frame" x="95" y="24" width="304" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGx-Nn-v0k">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="80.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IC9-Od-uyk" firstAttribute="centerY" secondItem="bHY-P2-pxY" secondAttribute="centerY" id="1mp-a9-AhH"/>
+                            <constraint firstItem="KWA-KA-SpU" firstAttribute="leading" secondItem="IC9-Od-uyk" secondAttribute="trailing" constant="8" id="2lP-Lz-wBL"/>
+                            <constraint firstItem="IC9-Od-uyk" firstAttribute="leading" secondItem="bHY-P2-pxY" secondAttribute="leading" constant="8" id="3rv-Yr-9Sp"/>
+                            <constraint firstAttribute="bottom" secondItem="KWA-KA-SpU" secondAttribute="bottom" constant="24" id="ERf-XM-eZ1"/>
+                            <constraint firstAttribute="trailing" secondItem="KWA-KA-SpU" secondAttribute="trailing" constant="8" id="VqO-e5-4kG"/>
+                            <constraint firstItem="KWA-KA-SpU" firstAttribute="top" secondItem="bHY-P2-pxY" secondAttribute="top" constant="24" id="hYA-d2-Vsk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="bHY-P2-pxY" firstAttribute="top" secondItem="bQx-hT-ufb" secondAttribute="top" constant="21" id="7IX-HY-oqd"/>
+                    <constraint firstItem="bHY-P2-pxY" firstAttribute="leading" secondItem="bQx-hT-ufb" secondAttribute="leading" constant="30" id="ABA-oY-DvN"/>
+                    <constraint firstAttribute="bottom" secondItem="bHY-P2-pxY" secondAttribute="bottom" constant="20.5" id="G7g-pE-mvW"/>
+                    <constraint firstAttribute="trailing" secondItem="bHY-P2-pxY" secondAttribute="trailing" constant="30" id="rim-bl-oUY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="ALh-a5-GcK"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="holderView" destination="bHY-P2-pxY" id="GQg-Bu-o9W"/>
+                <outlet property="nameLbl" destination="jGx-Nn-v0k" id="TCq-Rw-GOw"/>
+                <outlet property="productImg" destination="IC9-Od-uyk" id="ICd-Xe-xjW"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="172.71364317841082"/>
+        </tableViewCell>
+    </objects>
+</document>

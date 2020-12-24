@@ -37,7 +37,7 @@ final class BlissLocalSource: BlissLocalDataSource {
                 completion(.success([:]))
             }
         } else {
-            completion(.failure(RuntimeError("Unable to fetch prices from local source")))
+            completion(.failure(RuntimeError("Unable to fetch emojis from local source")))
         }
     }
 

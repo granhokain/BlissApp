@@ -61,6 +61,7 @@ class HomeViewController: UIViewController {
     }()
 
     private let viewModel = HomeViewModel()
+    var presentedVC: UIViewController?
 
     //MARK: Life Cycle
     override func viewDidLoad() {
@@ -68,7 +69,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         bindViewModel()
-        viewModel.fetchMarketPrice()
+        viewModel.getEmojiList()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -77,12 +78,33 @@ class HomeViewController: UIViewController {
         self.imgTitle.image = UIImage(named: "Bug")
     }
 
+    //MARK: Actions
     @IBAction func changeImage(_ sender: Any) {
         viewModel.getRandomEmoji()
     }
 
     @IBAction func showEmojisList(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "EmojiList", bundle: nil)
+        let presentedVC = storyBoard.instantiateViewController(withIdentifier: "EmojiListViewController")
+        presentedVC.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain,
+                                                                       target: self,
+                                                                       action: #selector(didTapCloseButton(_:)))
+        let nvc = UINavigationController(rootViewController: presentedVC)
+        present(nvc, animated: false, pushing: true, completion: nil)
     }
+
+    @IBAction func btnSearch(_ sender: Any) {
+        futureImplementations()
+    }
+
+    @IBAction func btnShowAvatarList(_ sender: Any) {
+        futureImplementations()
+    }
+
+    @IBAction func btnShowAppleRepos(_ sender: Any) {
+        futureImplementations()
+    }
+
 
     //MARK: Bind ViewModel
     private func bindViewModel() {
@@ -110,5 +132,49 @@ class HomeViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+
+    @objc func didTapCloseButton(_ sender: Any) {
+        if let presentedVC = presentedViewController {
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromLeft
+            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            presentedVC.view.window!.layer.add(transition, forKey: kCATransition)
+        }
+
+        dismiss(animated: false, completion: nil)
+
+        presentedVC = nil
+    }
+
+    func futureImplementations() {
+        let alert = UIAlertController(title: "What's next", message: "This feature will be implemented soon.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension UIViewController {
+
+    open func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, pushing: Bool, completion: (() -> Void)? = nil) {
+
+        if pushing {
+
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromRight
+            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            view.window?.layer.add(transition, forKey: kCATransition)
+            viewControllerToPresent.modalPresentationStyle = .fullScreen
+            self.present(viewControllerToPresent, animated: false, completion: completion)
+
+        } else {
+            self.present(viewControllerToPresent, animated: flag, completion: completion)
+        }
+
+    }
+
 }
 

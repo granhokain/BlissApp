@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class HomeViewModel {
     private let repository: BlissRepository
@@ -20,12 +21,12 @@ final class HomeViewModel {
         self.repository = repository
     }
 
-    func fetchMarketPrice(update: Bool = false) {
-//        if !update {
-//            startLoading?()
-//        }
+    func getEmojiList(update: Bool = false) {
+        if !update {
+            startLoading?()
+        }
 
-        repository.fetchMarketPrice(update: update) { [weak self] result in
+        repository.getEmojiList(update: update) { [weak self] result in
             switch result {
             case .success(let emojis):
                 self?.endLoading?()
@@ -41,7 +42,7 @@ final class HomeViewModel {
     }
 
     func getRandomEmoji() {
-        repository.fetchMarketPrice(update: false) { [weak self] result in
+        repository.getEmojiList(update: false) { [weak self] result in
             switch result {
             case .success(let emojis):
                 self?.endLoading?()
@@ -54,5 +55,12 @@ final class HomeViewModel {
                 self?.showError?("Something wrong!", error.localizedDescription)
             }
         }
+    }
+
+    func showEmojiList(vc: HomeViewController) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "EmojiList", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "EmojiListViewController")
+        newViewController.modalPresentationStyle = .fullScreen
+        vc.present(newViewController, animated: true, completion: nil)
     }
 }
